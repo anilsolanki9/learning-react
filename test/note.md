@@ -1,1 +1,0 @@
-default export => one file can do one degault export.
