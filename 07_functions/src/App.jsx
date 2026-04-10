@@ -1,37 +1,39 @@
 import React from "react";
+import Page1 from "./pages/Page1";
+import Page2 from "./pages/Page2";
+import Page3 from "./pages/Page3";
 
 const App = () => {
-  // const btnCLicked = () => {
-  //   console.log("click");
-  // };
-
-  const inpChange = (evt) => {
-    console.log(evt.target.value);
+  const pageScrolling = (speed) => {
+    // console.log("Page scrolling...at speed: ", speed);
+    if (speed > 0) console.log("scroll down");
+    else console.log("Scroll up");
   };
 
   return (
-    <div className="p-5 space-y-5">
-      <h1>Hello gyus</h1>
+    <div
+      onWheel={(e) => {
+        // console.log(e.deltaY); // speed of y scroll
 
-      {/* <button
-        className="bg-black text-white px-5 py-2 rounded cursor-pointer"
-        onClick={btnCLicked}
-      >
-        Change User
-      </button> */}
-
-      <input
-        // onChange={inpChange}
-        onChange={(evt) => {
-          inpChange(evt);
-        }}
-        className="px-5 py-2 bg-zinc-400 text-black text-2xl font-bold"
-        type="text"
-        name=""
-        id=""
-      />
+        pageScrolling(e.deltaY);
+      }}
+    >
+      <Page1 />
+      <Page2 />
+      <Page3 />
     </div>
   );
 };
 
 export default App;
+
+/*
+<div
+  onMouseMove={(e) => {
+    console.log(e.clientX, e.clientY);
+  }}
+  className="h-100 w-100 bg-red-500"
+>
+  Hello
+</div>
+*/
