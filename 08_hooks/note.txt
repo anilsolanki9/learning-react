@@ -1,0 +1,33 @@
+Hooks => Special functions that do special tasks.
+eg. 
+- useState
+- useEffect
+- useReducer
+- useRef
+- useContext
+- useMemo
+- useCallback
+
+useState => manage state, (old value, new value manage krna)
+useState variables me hue changes UI me automatically refrlect ho jate hai. 
+
+useEffect => To run some actions when a state variale changes, this is managed in side stack.
+= used in API data fetching, DOM events, event listener etc. Or to mount unmount component
+
+React, react wants that everything(actions) happens throughit. 
+User <=> React <=> Website DOM
+
+useRef => To Select a DOM element, mutable values hold krne ke liye jo re render trigger na kre. 
+
+useContext => To manage data flow easily. Data ko globally access krne ke liye without using props drillig. eg. dark theme light theme manage krna. 
+
+useReducer => To manage complex logic. useContext (for simple), for complex data change like in array, or check if user is logged in or not in multiple locations we use useReducer
+eg. konsi cheez kaha pe access ho paegi, to we use useReducer. 
+(Its smaller version of Redux, Redux is very advanced)
+
+useState (State manage) => useContext (Global state manage) => useReducer (Global complex state manage)
+
+useMemo => for memorization
+useCallback, and useMemo => Are mainly used for optimization. 
+eg. Things are rerenderd a lot, eg. Home is re renderd then all its elems are re rendered, then we use useMemo, and useCallback.
+
