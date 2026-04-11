@@ -6,7 +6,7 @@ const Note = ({ title, desc, isImp, id, removeNote }) => {
       {isImp && <div className="bg-yellow-400 w-fit px-2 py-1 text-sm text-black font-bold rounded-lg absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2">imp</div>}
 
       <div className="w-8/10 space-y-2">
-        <h2 className="text-3xl font-semibold">{title}</h2>
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold">{title}</h2>
         <div>{desc}</div>
       </div>
 
